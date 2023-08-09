@@ -3,11 +3,7 @@ declare(strict_types=1);
 
 try {
     // 1 - Connexion à la DB
-    $pdo = new PDO(
-        'mysql:host=' . getenv('DB_HOST') . ';dbname=' . getenv('DB_DATABASE'),
-        getenv('DB_USERNAME'),
-        getenv('DB_PASSWORD')
-    );
+    require_once 'public/db/connection.php';
 
     // 2 - Requête SQL pour récupérer la liste des produits
     $stmt = $pdo->query("SELECT * FROM products LIMIT 20");
