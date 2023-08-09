@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+session_start();
+
 try {
     // 1 - Connexion à la DB
     require_once 'public/db/connection.php';

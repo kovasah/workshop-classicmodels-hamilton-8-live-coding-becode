@@ -15,7 +15,8 @@
                 <li><a href="/"><strong>Classic Models</strong></a></li>
             </ul>
             <ul>
-
+                Bonjour <?= $_SESSION['user']['username'] ?>
+                <li><a href="/register.php">Register</a></li>
             </ul>
         </nav>
     </header>
