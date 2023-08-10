@@ -9,15 +9,20 @@
     <title>Workshop Classic Models</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/"><strong>Classic Models</strong></a></li>
-            </ul>
-            <ul>
+<header>
+    <nav>
+        <ul>
+            <li><a href="/"><strong>Classic Models</strong></a></li>
+        </ul>
+        <ul>v
+            <?php if (!empty($_SESSION['user'])): ?>
                 Bonjour <?= $_SESSION['user']['username'] ?>
+                <li><a href="/logout.php">Logout</a></li>
+            <?php else: ?>
+                <li><a href="/login.php">Login</a></li>
                 <li><a href="/register.php">Register</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</header>
+<main>
